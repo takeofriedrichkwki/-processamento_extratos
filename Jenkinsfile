@@ -1,7 +1,5 @@
 pipeline{
-    agent{
-        label "TakeoPC-teste"
-    }
+    agent any
     stages{
         stage("Clone"){
             steps{
