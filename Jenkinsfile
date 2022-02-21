@@ -19,6 +19,7 @@ pipeline{
         }
         stage("Build"){
             steps{
+                sh 'chmod +x executar1.sh'
                 sh './executar1.sh'
             }
             post{
@@ -35,6 +36,7 @@ pipeline{
         }
         stage("Teste"){
             steps{
+                sh 'chmod +x executar_teste1.sh'
                 sh './executar_teste1.sh'
             }
             post{
@@ -51,6 +53,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
+                sh 'chmod +x deploy.sh'
                 sh './deploy.sh'
             }
             post{
